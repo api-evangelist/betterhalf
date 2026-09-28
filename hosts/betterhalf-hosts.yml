@@ -1,0 +1,70 @@
+generated: '2026-09-28'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 4
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - legal
+  - other
+  - website
+hosts:
+- host: api.betterhalf.ai
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: betterhalf.ai
+  role: api
+  relation: own
+- host: app.betterhalf.ai
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: betterhalf.ai
+  role: other
+  relation: own
+- host: betterhalf.ai
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: betterhalf.ai
+  role: other
+  relation: own
+- host: policies.google.com
+  found_by:
+  - pointer
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: google.com
+  role: legal
+  relation: other-domain
+- host: www.betterhalf.ai
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - hosting
+  vendor: vercel
+  registrable_domain: betterhalf.ai
+  role: website
+  relation: own

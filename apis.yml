@@ -1,23 +1,68 @@
 aid: betterhalf
+
 name: Betterhalf
-description: 'Betterhalf is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Betterhalf is an Indian matchmaking and matrimony mobile application that helps users find genuine and verified profiles for marriage. The app offers in‑app purchases, extensive profile verification, and a focus on Indian cultural preferences. It is available on Android via the Google Play Store and emphasizes privacy and secure matchmaking for its users.'
+
 url: https://raw.githubusercontent.com/api-evangelist/betterhalf/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
 - Company
-apis: []
+- Matchmaking
+- Matrimony
+- MobileApp
+- Indian
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/betterhalf-hosts.yml
+- type: Vendors
+  url: vendors/betterhalf-vendors.yml
+- type: SDKs
+  url: packages/betterhalf-packages.yml
+- type: Packages
+  url: packages/betterhalf-packages.yml
+- type: TermsOfService
+  url: https://policies.google.com/terms
+- type: PrivacyPolicy
+  url: https://policies.google.com/privacy
+- type: DomainSecurity
+  url: security/betterhalf-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/betterhalf
+  url: https://www.betterhalf.ai
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: OpenAPI spec endpoints on api.betterhalf.ai returned 404, indicating no machine‑readable contract is published.
+  evidence:
+    - url: https://api.betterhalf.ai/openapi.json
+      status: 404
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
